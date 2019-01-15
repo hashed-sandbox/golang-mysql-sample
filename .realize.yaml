@@ -1,0 +1,15 @@
+schema:
+  - name: golang-mysql-sample
+    path: .
+    commands:
+      install:
+        status: true
+      run:
+        status: true
+    watcher:
+      extensions:
+        - go
+      paths:
+        - /
+      ignored_paths:
+        - .git

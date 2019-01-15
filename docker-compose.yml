@@ -1,0 +1,21 @@
+version: "3"
+services:
+  api:
+    build: ./
+    command: realize s
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/go/src/github.com/hashed-sandbox/golang-mysql-sample/
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - data_storage:/var/lib/mysql
+
+volumes:
+  data_storage:
