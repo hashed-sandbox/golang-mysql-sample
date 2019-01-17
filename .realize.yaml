@@ -2,6 +2,8 @@ schema:
   - name: golang-mysql-sample
     path: .
     commands:
+      fmt:
+        status: true
       install:
         status: true
       run:
@@ -13,3 +15,4 @@ schema:
         - /
       ignored_paths:
         - .git
+        - vendor
